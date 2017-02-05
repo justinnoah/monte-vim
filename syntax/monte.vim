@@ -82,9 +82,12 @@ syn match monteOperator ' &!'
 syn match monteOperator ' ||'
 syn match monteOperator ' \*\*'
 syn match monteOperator '\w\+='
-
+" [=> module
+" (=> keywordArg
+" (arg, => keywordArg
+syn match monteOperator '\(\[\|(\s*\|,\s\+\)\@<==>'
 " Pairs
-syn match montePair '=>'
+syn match monteOperator '\(\w\+"\=\s\+\)\@<==>'
 
 " Errors
 syn match monteEqualError ' =[^~=>]'
